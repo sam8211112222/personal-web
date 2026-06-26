@@ -1,15 +1,18 @@
+import Link from "next/link";
+
 const navigationItems = [
-  { label: "最新", href: "/#latest" },
-  { label: "新增文章", href: "/editor" },
+  { label: "簡介", href: "/#intro" },
+  { label: "隨筆", href: "/#writing" },
+  { label: "後台", href: "/editor" },
 ];
 
 export function SiteHeader() {
   return (
     <header className="site-header" aria-label="網站頁首">
-      <a className="brand" href="#top" aria-label="回到首頁">
+      <Link className="brand" href="/#top" aria-label="回到首頁">
         <span className="brand-mark">AC</span>
         <span className="brand-text">Alex Chen</span>
-      </a>
+      </Link>
 
       <nav className="primary-nav" aria-label="主要導覽">
         {navigationItems.map((item) => (
@@ -35,7 +38,7 @@ export function SiteHeader() {
           padding: 0.85rem;
           border: 1px solid var(--line);
           border-radius: 1.35rem;
-          background: rgba(255, 248, 232, 0.78);
+          background: rgba(255, 248, 232, 0.82);
           box-shadow: var(--shadow);
           backdrop-filter: blur(20px) saturate(1.08);
         }
@@ -130,12 +133,6 @@ export function SiteHeader() {
           .primary-nav {
             grid-column: auto;
             justify-content: center;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .site-header {
-            border-radius: 1.7rem;
           }
         }
       `}</style>
