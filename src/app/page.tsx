@@ -54,7 +54,7 @@ export default function Home() {
 
       <SiteFooter />
 
-      <style jsx>{`
+      <style>{`
         .page-shell {
           width: min(100% - 2rem, var(--max-width));
           min-height: 100svh;

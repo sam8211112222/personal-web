@@ -18,7 +18,7 @@ export function SiteFooter() {
 
       <p className="copyright">© {new Date().getFullYear()} Alex Chen. All rights reserved.</p>
 
-      <style jsx>{`
+      <style>{`
         .site-footer {
           position: relative;
           display: grid;
