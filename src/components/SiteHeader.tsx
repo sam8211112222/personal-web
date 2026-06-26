@@ -20,7 +20,7 @@ export function SiteHeader() {
         Say hello
       </a>
 
-      <style jsx>{`
+      <style>{`
         .site-header {
           position: sticky;
           top: 1rem;

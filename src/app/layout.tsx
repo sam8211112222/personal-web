@@ -10,7 +10,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="zh-Hant">
       <body>
         {children}
-        <style jsx global>{`
+        <style>{`
           :root {
             --cream: #fcfbf4;
             --porcelain: #fff8e8;
