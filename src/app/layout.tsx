@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { themeCssVariables } from "@/config/theme";
 
 export const metadata: Metadata = {
   title: "Alex Chen | Personal Website",
@@ -12,17 +13,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <style>{`
           :root {
-            --cream: #fcfbf4;
-            --porcelain: #fff8e8;
-            --ink: #1f2520;
-            --moss: #596f4f;
-            --sage: #a9b99a;
-            --clay: #c06f4a;
-            --marigold: #e4b04a;
-            --dusty-rose: #d7a6a1;
-            --line: rgba(31, 37, 32, 0.12);
-            --shadow: 0 28px 90px rgba(57, 45, 25, 0.13);
-            --max-width: 1180px;
+            ${themeCssVariables().trim().replace(/\n/g, "\n            ")}
           }
 
           * {
