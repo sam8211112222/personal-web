@@ -1,4 +1,7 @@
-const navigationItems = ["關於", "作品", "隨筆", "經歷", "聯絡"];
+const navigationItems = [
+  { label: "最新", href: "/#latest" },
+  { label: "新增文章", href: "/editor" },
+];
 
 export function SiteHeader() {
   return (
@@ -10,8 +13,8 @@ export function SiteHeader() {
 
       <nav className="primary-nav" aria-label="主要導覽">
         {navigationItems.map((item) => (
-          <a href={`#${item}`} key={item}>
-            {item}
+          <a href={item.href} key={item.href}>
+            {item.label}
           </a>
         ))}
       </nav>
